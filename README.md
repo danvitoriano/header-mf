@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Header Micro-Frontend
 
-## Getting Started
+Este é o micro-frontend do **Header** da aplicação, desenvolvido com **Next.js**, **Material UI** e **Single-SPA**.
 
-First, run the development server:
+## 🚀 Execução Local
 
 ```bash
+# Instalar dependências
+npm install
+
+# Executar em desenvolvimento (porta 3001)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build para produção
+npm run build
+
+# Executar em produção
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Deploy na Vercel
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Deploy Automático
+1. Push para GitHub
+2. Conecte na Vercel
+3. Configure Root Directory: `header-mf`
+4. Deploy automático
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Deploy Manual
+```bash
+npm run deploy
+```
 
-## Learn More
+## 📦 Componente
 
-To learn more about Next.js, take a look at the following resources:
+O header inclui:
+- Logo da aplicação
+- Menu de navegação
+- Botões de ação
+- Ícone de perfil
+- Design responsivo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🔧 Configuração
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Portas
+- **Desenvolvimento**: 3001
+- **Produção**: Definida pela Vercel
 
-## Deploy on Vercel
+### Variáveis de Ambiente
+```bash
+NODE_ENV=production # Para build de produção
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📁 Estrutura
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+header-mf/
+├── src/app/
+│   ├── page.tsx          # Componente principal
+│   ├── microfrontend.tsx # Entry point Single-SPA
+│   └── layout.tsx        # Layout
+├── next.config.ts        # Configuração Next.js
+└── package.json
+```
+
+## 🎯 Single-SPA Integration
+
+Este micro-frontend expõe as seguintes funções:
+- `bootstrap()`: Inicialização
+- `mount()`: Montagem no DOM
+- `unmount()`: Desmontagem
+
+## 🔗 Dependências
+
+- Next.js 15
+- Material UI 7
+- Single-SPA 6
+- TypeScript 5
