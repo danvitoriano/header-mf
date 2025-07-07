@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   assetPrefix: process.env.NODE_ENV === 'production' ? '/header-mf' : undefined,
   
   // Configurar headers para permitir CORS
@@ -25,14 +24,6 @@ const nextConfig: NextConfig = {
         ],
       },
     ]
-  },
-
-  webpack: (config: any) => {
-    config.externals = {
-      react: 'React',
-      'react-dom': 'ReactDOM',
-    }
-    return config
   },
 };
 

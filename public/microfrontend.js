@@ -14,7 +14,7 @@
         element.innerHTML = `
           <div style="background-color: #1976d2; color: white; padding: 16px;">
             <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto;">
-              <h1 style="margin: 0; font-size: 1.5rem;">Micro-Frontend App (Remoto)</h1>
+              <h1 style="margin: 0; font-size: 1.5rem;">🚀 Header MF - Carregado Remotamente!</h1>
               <nav style="display: flex; gap: 16px;">
                 <a href="#" style="color: white; text-decoration: none;">Home</a>
                 <a href="#" style="color: white; text-decoration: none;">Sobre</a>
